@@ -1,0 +1,138 @@
+/*
+### Primary
+- Soft blue: hsl(215, 51%, 70%)
+- Cyan: hsl(178, 100%, 50%)
+
+### Neutral
+- Very dark blue (main BG): hsl(217, 54%, 11%)
+- Very dark blue (card BG): hsl(216, 50%, 16%)
+- Very dark blue (line): hsl(215, 32%, 27%)
+- White: hsl(0, 0%, 100%)
+*/
+
+:root {
+    /*Primary*/
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+
+    /*Neutral*/
+    --very-dark-blue-main: hsl(217, 54%, 11%);
+    --very-dark-blue-card: hsl(216, 50%, 16%);
+    --very-dark-blue-line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+
+    /* Typography*/
+    --default-size: 16px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--very-dark-blue-main);
+    color: var(--soft-blue);
+    padding: 0;
+    margin-top: 50px;
+    align-items: center;
+    justify-content: center;
+    font-family: "Outfit", sans-serif;
+    border-radius: 27px;
+    font-size: var(--default-size);
+}
+
+h1 {
+    font-size: 24px;
+    color: var(--white);
+}
+
+h1:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+main {
+    background-color: var(--very-dark-blue-card);
+    width: 300px;
+    height: auto;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.main-image {
+    position: relative;
+    width: 100%;
+    border-radius: 15px;
+}
+
+.main-view-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    opacity: 0;
+    top: 21%;
+    z-index: 10;
+    width: 300px;
+    height: 300px;
+    background-color: var(--cyan);
+    cursor: pointer;
+}
+
+.main-view-container:hover {
+    opacity: 0.4;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.price img, .deadline img {
+    width: 20px;
+    height: 20px;
+}
+
+.price p {
+    color: var(--cyan);
+    font-weight: 600;
+}
+
+.deadline {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.owner {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    border-top: 1px solid var(--very-dark-blue-line);
+}
+
+.owner img {
+    width: 30px;
+    height: 30px;
+    border: 2px solid var(--white);
+    border-radius: 50%;
+}
+
+.name {
+    color: var(--white);
+}
+
+.name:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+.attribution {
+    font-size: 12px;
+}
